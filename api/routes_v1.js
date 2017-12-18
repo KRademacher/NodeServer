@@ -6,19 +6,19 @@ var express = require('express');
 var routes = express.Router();
 
 var names = ["Jan", "Kees", "Piet"];
-var myObject = {
-	myText: 'Hello world!'
+var jsonObject = {
+	Hello: 'world!'
 };
 
 routes.get('/hello', function(req, res){
 	res.status(200);
-	res.json(myObject);
+	res.json(jsonObject);
 });
 
 routes.post('/hello', function(req, res){
 	console.dir(req.body);
 	res.status(200);
-	res.json(myObject);
+	res.json(jsonObject);
 });
 
 routes.get('/goodbye', function(req, res){
